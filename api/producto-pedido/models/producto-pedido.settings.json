@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "producto_pedidos",
+  "info": {
+    "name": "productoPedido",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "producto": {
+      "model": "producto"
+    },
+    "cantidad": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

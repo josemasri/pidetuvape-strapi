@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "producto",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "precio": {
+      "type": "decimal"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "imagenes": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "sabor": {
+      "type": "enumeration",
+      "enum": [
+        "lush_ice",
+        "cucumber",
+        "lychee_ice",
+        "mango",
+        "blue_razz",
+        "banana_ice"
+      ]
+    },
+    "descripcionLarga": {
+      "type": "richtext"
+    }
+  }
+}

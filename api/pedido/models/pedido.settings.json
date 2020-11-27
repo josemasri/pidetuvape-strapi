@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedidos",
+  "info": {
+    "name": "Pedido",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "producto_pedidos": {
+      "collection": "producto-pedido"
+    },
+    "total": {
+      "type": "decimal",
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "celular": {
+      "type": "string",
+      "required": true
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "zona": {
+      "type": "string"
+    },
+    "costoEnvio": {
+      "type": "decimal"
+    },
+    "subtotal": {
+      "type": "decimal"
+    },
+    "recoger": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
